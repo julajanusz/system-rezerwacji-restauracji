@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System_rezerwacji_stolikow", "System_rezerwacji_stolikow.csproj", "{E3FDF452-0109-4635-8B3E-7491356AADEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3FDF452-0109-4635-8B3E-7491356AADEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FDF452-0109-4635-8B3E-7491356AADEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FDF452-0109-4635-8B3E-7491356AADEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FDF452-0109-4635-8B3E-7491356AADEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80C27C50-D30D-49D8-9E3F-A070E867D88F}
+	EndGlobalSection
+EndGlobal
