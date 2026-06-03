@@ -1,16 +1,21 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using System_rezerwacji_stolikow.Models;
+using System_rezerwacji_stolikow.Data;
 
 namespace System_rezerwacji_stolikow.Controllers;
 
 public class HomeController : Controller
 {
+
+    private readonly AppDbContext _context;
+
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
@@ -46,6 +51,12 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Reservation(Reservation model)
     {
+        if (!ModelState.IsValid)
+            return View(model);
+
+        _context.Reservations.Add(model);
+        _context.SaveChanges();
+
         return View("ReservationResult", model);
     }
 }
