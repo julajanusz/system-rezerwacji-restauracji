@@ -1,0 +1,10 @@
+﻿@model System_rezerwacji_stolikow.Models.Reservation
+
+<h1>Dziękujemy za dokonanie rezerwacji!</h1>
+<h3>Poniżej znajduje się potwierdzenie danych dla Twojego stolika.</h3>
+
+<p><b>Imię i nazwisko: </b> @Model.Name</p>
+<p><b>Telefon:</b> @Model.Phone</p>
+<p><b>Data:</b> @Model.ReservationDate.ToShortDateString()</p>
+<p><b>Godzina:</b> @Model.ReservationTime</p>
+<p><b>Liczba osób:</b> @Model.PeopleCount</p>
