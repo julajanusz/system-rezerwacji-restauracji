@@ -43,6 +43,12 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Reservations()
+    {
+        var reservations = _context.Reservations.ToList();
+        return View(reservations);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

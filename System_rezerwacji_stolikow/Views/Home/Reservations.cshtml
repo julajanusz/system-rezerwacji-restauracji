@@ -1,0 +1,25 @@
+﻿@model List<System_rezerwacji_stolikow.Models.Reservation>
+
+<h1> Lista rezerwacji</h1>
+
+<table border="1">
+    <tr>
+        <th>Imię i nazwisko</th>
+        <th>Telefon</th>
+        <th>Data</th>
+        <th>Godzina</th>
+        <th>Liczba osób</th>
+    </tr>
+
+    @foreach (var reservation in Model)
+    {
+        <tr>
+            <td>@reservation.Name</td>
+            <td>@reservation.Phone</td>
+            <td>@reservation.ReservationDate.ToShortDateString()</td>
+            <td>@reservation.ReservationTime</td>
+            <td>@reservation.PeopleCount</td>
+        </tr>
+    }
+</table>
+
