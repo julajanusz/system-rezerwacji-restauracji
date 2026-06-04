@@ -9,6 +9,8 @@
         <th>Data</th>
         <th>Godzina</th>
         <th>Liczba osób</th>
+
+        <th>Akcje</th>
     </tr>
 
     @foreach (var reservation in Model)
@@ -19,6 +21,15 @@
             <td>@reservation.ReservationDate.ToShortDateString()</td>
             <td>@reservation.ReservationTime</td>
             <td>@reservation.PeopleCount</td>
+
+            <td>
+                <a asp-action="Delete"
+                asp-route-id="@reservation.Id"
+                onclick="return confirm('Czy na pewno chcesz usunąć rezerwację?')">
+                Usuń
+
+                </a>
+            </td>
         </tr>
     }
 </table>

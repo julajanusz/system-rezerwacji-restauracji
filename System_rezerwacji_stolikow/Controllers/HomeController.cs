@@ -49,6 +49,19 @@ public class HomeController : Controller
         return View(reservations);
     }
 
+    public IActionResult Delete (int id)
+    {
+        var reservation = _context.Reservations.Find(id);
+
+        if (reservation != null)
+        {
+            _context.Reservations.Remove(reservation);
+            _context.SaveChanges();
+        }
+
+        return RedirectToAction("Reservations");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
