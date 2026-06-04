@@ -49,6 +49,28 @@ public class HomeController : Controller
         return View(reservations);
     }
 
+    public IActionResult Edit(int id)
+    {
+        var reservation = _context.Reservations.Find(id);
+
+        if (reservation == null)
+            return NotFound();
+
+        return View(reservation);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Reservation reservation)
+    {
+        if (!ModelState.IsValid)
+            return View(reservation);
+
+        _context.Reservations.Update(reservation);
+        _context.SaveChanges();
+
+        return RedirectToAction("Reservations");
+    }
+
     public IActionResult Delete (int id)
     {
         var reservation = _context.Reservations.Find(id);

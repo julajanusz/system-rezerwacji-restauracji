@@ -1,0 +1,36 @@
+﻿@model System_rezerwacji_stolikow.Models.Reservation
+
+<h1>Edycja rezerwacji</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label>Imię i nazwisko</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Telefon</label>
+        <input asp-for="Phone" />
+    </div>
+
+    <div>
+        <label>Data</label>
+        <input asp-for="ReservationDate" type="date" />
+    </div>
+
+    <div>
+        <label>Godzina</label>
+        <input asp-for="ReservationTime" type="time" />
+    </div>
+
+    <div>
+        <label>Liczba osób</label>
+        <input asp-for="PeopleCount" type="number" />
+    </div>
+
+    <button type="submit">Zapisz zmiany</button>
+
+</form>
