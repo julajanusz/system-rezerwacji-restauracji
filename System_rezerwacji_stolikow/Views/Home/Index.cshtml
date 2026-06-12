@@ -2,15 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">System rezerwacji stolików</h1>
-    <p>Witamy w restauracji Dolce Vita</p>
+<div class="text-center p-5 rounded shadow" style="background:white; border-top:4px solid #c0392b;">
+    <h1 class="display-4" style="color:#1f7a3a;">
+        System rezerwacji stolików
+    </h1>
+    <p style="color:#c0392b; font-weight:600;">
+        Witamy w restauracji Dolce Vita
+    </p>
     <p>Zarezerwuj u Nas stolik już teraz! Online, szybko i wygodnie.</p>
-    <a class="btn btn-success" asp-controller="Home" asp-action="Reservation">
-        Zarezerwuj stolik :)
-    </a>
+
     <p>*W celu rezerwacji stolika dla grupy powyżej 10 osób, prosimy o kontakt mailowy:
         (restauracja@dolcevita.pl). Przy grupach OD 10 OSÓB doliczamy obowiązkowy serwis 
         w wysokości 10% od wartości całego rachunku.
     </p>
+    <p style="font-style:italic;">
+        “La vita è troppo breve per mangiare male”
+    </p>
+
+    <p style="font-style:italic; color:#777;">
+        Pizza - Pasta - Wine - Tiramisu
+    </p>
+
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg"
+           asp-controller="Home"
+           asp-action="Reservation">
+            Zarezerwuj stolik
+        </a>
+    </div>
 </div>
