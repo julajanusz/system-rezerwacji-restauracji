@@ -23,5 +23,11 @@ namespace System_rezerwacji_stolikow.Controllers
             ViewBag.Error = "Zły login lub hasło";
             return View();
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("Admin");
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
