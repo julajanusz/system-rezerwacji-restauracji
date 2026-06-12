@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Panel Admina";
+}
+
+<div class="container mt-5">
+
+    <h1 class="mb-4 text-center">Panel Administratora</h1>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-4">
+                <h4>Rezerwacje</h4>
+                <p>Zobacz wszystkie rezerwacje</p>
+                <a class="btn btn-primary" asp-controller="Home" asp-action="Reservations">
+                    Przejdź
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-4">
+                <h4>Dodaj rezerwację</h4>
+                <p>Dodaj nową rezerwację ręcznie</p>
+                <a class="btn btn-success" asp-controller="Home" asp-action="Reservation">
+                    Przejdź
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-4">
+                <h4>Wylogowanie</h4>
+                <p>Wyloguj się z panelu</p>
+                <a class="btn btn-danger" asp-controller="Login" asp-action="Logout">
+                    Wyloguj
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

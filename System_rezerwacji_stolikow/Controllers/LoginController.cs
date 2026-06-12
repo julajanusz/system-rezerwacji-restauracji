@@ -17,7 +17,7 @@ namespace System_rezerwacji_stolikow.Controllers
             {
                 HttpContext.Session.SetString("Admin", "true");
 
-                return RedirectToAction("Reservations", "Home");
+                return RedirectToAction("Index", "Admin");
             }
 
             ViewBag.Error = "Zły login lub hasło";
