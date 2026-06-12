@@ -45,6 +45,11 @@ public class HomeController : Controller
 
     public IActionResult Reservations()
     {
+        if (HttpContext.Session.GetString("Admin") != "true")
+        {
+            return RedirectToAction("Index", "Login");
+        }
+
         var reservations = _context.Reservations.ToList();
         return View(reservations);
     }
